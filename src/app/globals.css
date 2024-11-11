@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,25 +11,74 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+}
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "Montserrat", sans-serif;
+}
+.bg-primary {
+  background: #2947a9;
+}
+
+.bg-second {
+  background: #ff5733;
+}
+
+.hero-bg {
+  background-image: url("/background/hero-bg.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.about-us-bg{
+  background-image: url("/background/about-us-bg.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.about-us-bg2{
+  background-image: url("/background/about-us-bg2.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div {
+  line-height: normal;
+}
+h1 {
+  @apply text-[32px] md:text-[54px] lg:text-[64px]
+}
+h2 {
+  @apply text-[24px] md:text-[32px]
+}
+h3 {
+  @apply text-[18px] md:text-[24px]
+}
+h4 {
+  @apply text-[18px]
+}
+h5 {
+  @apply text-[16px]
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .contain{
+    @apply px-[12px] md:px-[30px] lg:px-[100px] w-full mx-auto
   }
 }
